@@ -1,0 +1,72 @@
+body {
+    background-color: #F4F4F9; /* رنگ پس‌زمینه کلی صفحه */
+    font-family: Arial, sans-serif; /* فونت متن‌ها */
+    display: flex;
+    justify-content: center; /* تراز کردن ماشین‌حساب به صورت افقی */
+    align-items: center; /* تراز کردن ماشین‌حساب به صورت عمودی */
+    height: 100vh; /* ارتفاع صفحه کامل */
+    margin: 0; /* حذف فاصله‌های پیش‌فرض مرورگر */
+}
+
+.calculator {
+    background-color: #1E1E2E; /* رنگ پس‌زمینه ماشین‌حساب */
+    border-radius: 12px; /* گوشه‌های گرد */
+    padding: 20px; /* فاصله داخلی */
+    width: 320px; /* عرض ماشین‌حساب */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* سایه برای ایجاد عمق */
+}
+
+.display {
+    background-color: #1E1E2E; /* رنگ پس‌زمینه نمایشگر */
+    color: #FFFFFF; /* رنگ متن نمایشگر (اعداد و نتایج) */
+    font-size: 2.5em; /* اندازه فونت بزرگ برای نمایشگر */
+    padding: 20px; /* فاصله داخلی نمایشگر */
+    border-radius: 8px; /* گوشه‌های گرد نمایشگر */
+    text-align: right; /* تراز کردن متن به سمت راست */
+    margin-bottom: 20px; /* فاصله پایین نمایشگر از دکمه‌ها */
+    height: 60px; /* ارتفاع نمایشگر */
+}
+
+.buttons {
+    display: grid; /* استفاده از شبکه برای چیدمان دکمه‌ها */
+    grid-template-columns: repeat(4, 1fr); /* چیدمان دکمه‌ها در ۴ ستون مساوی */
+    grid-gap: 10px; /* فاصله بین دکمه‌ها */
+}
+
+.button {
+    background-color: #E0E0E0; /* رنگ پس‌زمینه دکمه‌های اعداد */
+    color: #000000; /* رنگ متن دکمه‌ها */
+    border: none; /* حذف حاشیه دکمه‌ها */
+    border-radius: 8px; /* گوشه‌های گرد دکمه‌ها */
+    padding: 20px; /* فاصله داخلی دکمه‌ها */
+    font-size: 1.5em; /* اندازه فونت دکمه‌ها */
+    cursor: pointer; /* نشانگر موس هنگام قرار گرفتن روی دکمه */
+    transition: background-color 0.2s; /* افکت تغییر رنگ هنگام هاور کردن */
+}
+
+.button:hover {
+    background-color: #D0D0D0; /* تغییر رنگ دکمه‌ها هنگام هاور کردن */
+}
+
+.button-operator {
+    background-color: #FF9500; /* رنگ پس‌زمینه دکمه‌های عملگرها */
+    color: #FFFFFF; /* رنگ متن دکمه‌های عملگرها */
+}
+#num-plus {
+    grid-row: span 2;
+}
+
+.button-clear {
+    background-color: #FF3B30; /* رنگ پس‌زمینه دکمه پاک کردن */
+    color: #FFFFFF; /* رنگ متن دکمه پاک کردن */
+}
+
+.button-equal {
+    background-color: #34C759; /* رنگ پس‌زمینه دکمه مساوی */
+    color: #FFFFFF; /* رنگ متن دکمه مساوی */
+    grid-column: span 2; /* دکمه مساوی به اندازه دو ستون گسترش پیدا می‌کند */
+}
+
+.button-zero {
+    grid-column: span 2; /* دکمه صفر هم می‌تواند به اندازه دو ستون گسترش پیدا کند (در صورت نیاز) */
+}
